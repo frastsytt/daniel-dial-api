@@ -6,3 +6,19 @@ For example on Ubuntu 22.04, you would run this command to set the "PORT" enviro
 ```bash
 export PORT=3000
 ```
+If you are using pm2 to run the application in your server, supply the environment variables for it.
+```js
+module.exports = {
+  apps : [
+    {
+      name: "index",
+      script: "./dist/index.js",
+      env: {
+        NODE_ENV: "production",
+        PORT: process.env.PORT
+        SECRET: process.env.SECRET
+      }
+    }
+  ]
+}
+```

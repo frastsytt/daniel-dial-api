@@ -1,3 +1,4 @@
 /domain.crt
 /domain.key
 /node_modules
+/package-lock.json
